@@ -555,8 +555,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
     .nav-links {
-        display: none; /* Mobile menu needed for real prod, kept simple here */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
     
     .hero-title {
