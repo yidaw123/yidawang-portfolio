@@ -38,7 +38,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-base);
-    background-image: linear-gradient(rgba(13, 17, 23, 0.90), rgba(13, 17, 23, 0.90)), url('images/background_8k.png');
+    background-image: linear-gradient(rgba(13, 17, 23, 0.70), rgba(13, 17, 23, 0.70)), url('images/background_8k_v2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -622,6 +622,42 @@ section {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
     color: white;
+}
+
+/* Bilingual Name Handling */
+.name-zh {
+    display: none;
+}
+
+html[lang="zh-CN"] .name-en,
+html[lang="zh-TW"] .name-en {
+    display: none !important;
+}
+
+html[lang="zh-CN"] .name-zh,
+html[lang="zh-TW"] .name-zh {
+    display: inline !important;
+}
+
+/* Google Translate Customization */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+.goog-te-gadget-simple {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: var(--text-primary) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span:hover {
+    color: var(--accent-color) !important;
 }
 
 /* Chat Window */
