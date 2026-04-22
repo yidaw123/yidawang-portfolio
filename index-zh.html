@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yida Wang</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index-zh.html" class="nav-brand">王一达</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="experience-zh.html" class="nav-link">专业经验</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropbtn">项目与作品集 <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="https://public.tableau.com/app/profile/yida.wang/vizzes" target="_blank">Tableau 仪表板</a>
+                        <a href="https://github.com/yidaw123" target="_blank">GitHub 个人主页</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropbtn">联系方式 <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="mailto:yidaw93@hotmail.com">给我发邮件</a>
+                        <a href="https://www.linkedin.com/in/yida-wang/" target="_blank">领英</a>
+                    </div>
+                </li>
+                <li class="search-nav-item">
+                    <div class="search-container">
+                        <input type="text" id="site-search" placeholder="搜索..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div id="search-results" class="search-results-dropdown"></div>
+                </li>
+                <li class="translate-nav-item" style="display: flex; align-items: center; margin-left: 10px;">
+                    <a href="index.html" class="nav-link" style="color: var(--accent-color); font-weight: bold;"><i class="fas fa-globe"></i> English</a>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-title">王一达</h1>
+                <h2 class="hero-subtitle">Circana 高级数据科学经理 II</h2>
+                <h2 class="section-title text-center">核心技能</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">机器学习</div>
+                <div class="skill-tag">数据可视化</div>
+                <div class="skill-tag">产品管理</div>
+                <div class="skill-tag">领导力</div>
+            </div>        <a href="https://github.com/yidaw123" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/yida-wang/" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> 领英</a>
+                    <a href="#" class="btn btn-outline" download><i class="fas fa-file-pdf"></i> 简历</a>
+                </div>
+            </div>
+            <div class="hero-image-container fade-in-up" style="transition-delay: 0.2s;">
+                <img src="images/profile_pic.jpg" alt="Yida Wang" class="hero-image" onerror="this.src='https://ui-avatars.com/api/?name=Yida+Wang&size=512&background=0D1117&color=667EEA'">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container fade-in-up">
+        <h2 class="section-title">关于我</h2>
+        <div class="card about-text">
+            <p>以结果为导向的高级数据科学经理，拥有7年以上的跨部门团队领导经验，擅长开发预测模型和部署高影响力的分析产品。</p>
+            
+            <p>在优化定价策略、提高运营效率以及将复杂数据转化为可操作的业务洞察方面拥有丰富的成功经验。</p>
+            
+            <p>我热衷于迎接新的挑战和探索，目前正致力于在科技、B2C和数据分析领域拓展创业机会。如果您有合作意向，或只是想交流更多关于我的背景信息，欢迎随时在领英上给我留言！</p>
+        </div>
+    </section>
+
+    <!-- Expertise & Education Grid -->
+    <section class="container" style="margin-top: 4rem;">
+        <div class="grid-2">
+            <!-- Expertise -->
+            <div class="fade-in-up">
+                <h2 class="section-title" style="text-align: left;">专业领域</h2>
+                <ul class="expertise-list">
+                    <li><i class="fas fa-chart-pie"></i> 数据分析、管理与可视化</li>
+                    <li><i class="fas fa-lightbulb"></i> 商业智能与分析</li>
+                    <li><i class="fas fa-search"></i> 定量与定性研究</li>
+                    <li><i class="fas fa-briefcase"></i> 业务运营与咨询</li>
+                    <li><i class="fas fa-tasks"></i> 产品与项目管理</li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <div class="fade-in-up" style="transition-delay: 0.2s;">
+                <h2 class="section-title" style="text-align: left;">教育背景</h2>
+                
+                <div class="education-item">
+                    <div class="education-title">犯罪学理学硕士（专注于政策方向）, 2016</div>
+                    <div class="education-meta">
+                        <i class="fas fa-graduation-cap" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                        <a href="https://crim.sas.upenn.edu/" target="_blank">宾夕法尼亚大学</a>, 费城
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">犯罪学与社会学荣誉文学学士, 2015</div>
+                    <div class="education-meta">
+                        <i class="fas fa-graduation-cap" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                        <a href="https://www.crimsl.utoronto.ca/" target="_blank">多伦多大学（主校区）</a>, 多伦多
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> 王一达</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title"><i class="fas fa-robot"></i> AI 秘书</div>
+                <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">你好！我是王一达的 AI 秘书。问问我为什么一达是您下一个大项目的完美人选吧！</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="输入问题..." autocomplete="off">
+                <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="chatbot-btn" id="chatbot-toggle" title="Chat with AI Secretary">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-text">AI 秘书</span>
+        </button>
+    </div>
+
+    <script src="script-zh.js"></script>
+</body>
+</html>

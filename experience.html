@@ -13,7 +13,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="nav-brand"><span class="name-en" translate="no">Yida Wang</span><span class="name-zh" translate="no">王一达</span></a>
+            <a href="index.html" class="nav-brand">Yida Wang</a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="experience.html" class="nav-link active">Experience</a></li>
                 <li class="dropdown">
@@ -34,7 +34,7 @@
                     <div id="search-results" class="search-results-dropdown"></div>
                 </li>
                 <li class="translate-nav-item" style="display: flex; align-items: center; margin-left: 10px;">
-                    <div id="google_translate_element"></div>
+                    <a href="experience-zh.html" class="nav-link" style="color: var(--accent-color); font-weight: bold;"><i class="fas fa-globe"></i> 中文</a>
                 </li>
             </ul>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
@@ -226,7 +226,7 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <p>&copy; <span id="year"></span> <span class="name-en" translate="no">Yida Wang</span><span class="name-zh" translate="no">王一达</span></p>
+            <p>&copy; <span id="year"></span> Yida Wang</p>
         </div>
     </footer>
 
@@ -250,14 +250,6 @@
             <span class="chatbot-text">AI Secretary</span>
         </button>
     </div>
-
-    <!-- Google Translate Script -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="script.js"></script>
 </body>
