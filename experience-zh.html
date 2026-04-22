@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Experience - Yida Wang</title>
+    <title>工作经验 - 王一达</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,21 +15,17 @@
         <div class="container nav-container">
             <a href="index-zh.html" class="nav-brand">王一达</a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="experience-zh.html" class="nav-link active">专业经验</a></li>
+                <li><a href="experience-zh.html" class="nav-link active">工作经验</a></li>
                 <li class="dropdown">
-                    <a href="#" class="nav-link dropbtn">项目与作品集 <i class="fas fa-caret-down"></i></a>
+                    <a href="#" class="nav-link">CV <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="https://public.tableau.com/app/profile/yida.wang/vizzes" target="_blank">Tableau 仪表板</a>
-                        <a href="https://github.com/yidaw123" target="_blank">GitHub 个人主页</a>
+                        <a href="https://public.tableau.com/app/profile/yida.wang24/viz/yida_resume/Resume" target="_blank" rel="noopener noreferrer">Interactive</a>
+                        <a href="CV/website_resume.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropbtn">联系方式 <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="mailto:yidaw93@hotmail.com">给我发邮件</a>
-                        <a href="https://www.linkedin.com/in/yida-wang/" target="_blank">领英</a>
-                    </div>
-                </li>
+                <li><a href="https://github.com/yidaw123" target="_blank" rel="noopener noreferrer" class="nav-link" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/yidawang/" target="_blank" rel="noopener noreferrer" class="nav-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://public.tableau.com/app/profile/yida.wang24/vizzes" target="_blank" rel="noopener noreferrer" class="nav-link" title="Tableau Profile"><i class="fas fa-chart-bar"></i></a></li>
                 <li class="search-nav-item">
                     <div class="search-container">
                         <input type="text" id="site-search" placeholder="搜索..." class="search-input">
@@ -48,62 +44,178 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="page-header container">
-        <h1 class="page-title fade-in-up">专业经验</h1>
-        <p class="page-subtitle fade-in-up" style="transition-delay: 0.1s;">简要介绍我过去的工作和项目。</p>
+    <header class="page-header container fade-in-up">
+        <h1 class="page-title">工作经验</h1>
+        <p class="hero-subtitle" style="margin-top: 1rem;">我过去工作和项目的简要概览。</p>
     </header>
-
-    <!-- Table of Contents -->
-    <div class="toc-container container fade-in-up" style="transition-delay: 0.2s;">
-        <div class="toc-title"><i class="fas fa-list-ul"></i> 内容</div>
-        <ul class="toc-list">
-            <li><a href="#circana">Circana (前身 IRI 和 NPD)</a></li>
-            <li><a href="#opp">安大略省警察局</a></li>
-            <li><a href="#uchicago">芝加哥大学犯罪实验室</a></li>
-            <li><a href="#other">其他工作</a></li>
-        </ul>
-    </div>
 
     <!-- Experience Layout -->
     <section class="container experience-layout" style="padding-top: 2rem;">
         
+        <!-- Sidebar TOC -->
+        <aside class="sidebar-toc fade-in-up" style="transition-delay: 0.2s;">
+            <h3 class="toc-title">目录</h3>
+            <ul class="toc-links">
+                <li><a href="#circana" class="toc-link">Circana（前身为 IRI 和 NPD Group）</a></li>
+                <li><a href="#opp" class="toc-link">安大略省警察局</a></li>
+                <li><a href="#uchicago" class="toc-link">芝加哥大学犯罪实验室</a></li>
+                <li><a href="#conferences" class="toc-link">参加的会议</a></li>
+            </ul>
+        </aside>
+
         <!-- Content -->
         <div class="experience-content">
             
             <!-- Circana Section -->
-            <section id="circana" class="timeline-item fade-in-up">
-            <div class="timeline-date">当前</div>
-            <div class="card timeline-content">
-                <h2 class="timeline-title">Circana (前身 IRI 和 NPD)</h2>
-                <h3 class="timeline-subtitle">高级数据科学经理 II</h3>
-                
-                <h4 class="section-title text-left" style="font-size: 1.2rem; margin-top: 1.5rem;">项目与产品管理</h4>
-                <p>目前，我担任高级数据科学经理 II（数据科学），负责多个定价分析产品（例如查看一些工具功能 <a href="https://www.circana.com/solution-areas/analytics/" target="_blank" class="text-link">这里</a>）。我领导一个由顾问和副分析师组成的团队，致力于生成可执行的洞察并推动决策。我负责产品、ETL 管道和后端，并确保质量控制和测试的落实以实现最佳性能。此外，我还负责监督所有与分析相关的交付成果，包括分析报告、培训材料和高管演示。</p>
-            </div>
-        </section>
-
-            <!-- OPP Section -->
-            <section id="opp" class="timeline-item fade-in-up">
-            <div class="timeline-date">2019-2021</div>
-            <div class="card timeline-content">
-                <h2 class="timeline-title">安大略省警察局</h2>
-                <h3 class="timeline-subtitle">统计学家，商业智能（BI）与分析负责人</h3>
-                
-                <h4 class="section-title text-left" style="font-size: 1.2rem; margin-top: 1.5rem;">交通数据分析项目组合</h4>
-                <p>在 OPP 工作期间，我是交通相关分析的项目负责人。我从零开始构建了多个 Power BI 仪表板，以自动化交通事故和伤亡的报告。该自动化每周节省了 10 多个小时的手工工作，并消除了人为错误。这些仪表板被高管用于资源分配和战略规划。</p>
-
-                <div class="image-gallery">
-                    <figure class="gallery-item">
-                        <img src="images/tableau1.jpg" alt="我在2019年Tableau数据之夜。" class="rounded-image" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'">
-                        <figcaption>我在2019年Tableau数据之夜。</figcaption>
-                    </figure>
+            <section id="circana" class="card fade-in-up" style="transition-delay: 0.3s;">
+                <div class="org-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Circana（前身为 IRI 和 NPD Group）</h2>
                 </div>
                 
-                <p style="margin-top: 1rem;">如果您对 Tableau 活动和会议感兴趣，请点击这里 <a href="https://www.tableau.com/events" target="_blank" class="text-link">Tableau 活动</a></p>
-            </div>
-        </section>
+                <div class="role-section">
+                    <h3 class="role-title">项目与产品管理</h3>
+                    <div class="role-desc">
+                        <p>In my current role as Senior Manager II - Data Science, I oversee several pricing analytics products (for more information on what the tools can do please click <a href="https://www.circana.com/solution-areas/analytics" target="_blank">here</a>). In this capacity I lead a team of consultants, managers, and analysts to generate actionable insights that drive strategic decision-making. I am responsible for testing products, ETLs, and new features, as well as ensuring quality control and debugging for optimal performance. Additionally, I manage all analytics-related deliverables, including analyses, reports, training materials, and executive-level presentations and Q&A sessions.</p>
+                        <div class="img-gallery">
+                            <figure>
+                                <img src="images/Circana.jpg" alt="Circana merger">
+                                <figcaption>2022 年 IRI 与 NPD Group 的合并，推动新合并组织在全球市场研究公司中迈向更高层次。</figcaption>
+                            </figure>
+                        </div>
+                        <p>我在市场研究咨询方面的专长涵盖多个业务领域，包括科技、消费品、零售、媒体和综合商品。我专注于通过定量方法（如大数据分析、预测建模和预测）以及定性方法（包括调查、焦点小组和消费者行为分析）生成洞察。</p>
+                    </div>
+                </div>
+
+                <div class="role-section">
+                    <h3 class="role-title">编程与机器学习</h3>
+                    <div class="role-desc">
+                        <p>除了领导职责之外，我仍然深度参与数据科学的实践工作。只要有机会，我就会承担编程项目，以精进和拓展我的技术技能。在日常工作中，我经常使用 SQL、SAS 和 Python 等工具来探索数据、开发模型并提升分析能力。</p>
+                        <p>我目前正在提升我的 Python 技能，并学习在 Databricks 中部署 ML 模型。我热爱学习，但有时会过于乐观地估计自己的效率，结果在 <a href="https://www.udemy.com/" target="_blank">Udemy</a>、<a href="https://www.edx.org/" target="_blank">edX</a> 和 <a href="https://www.datacamp.com/" target="_blank">DataCamp</a> 上报了远超自己能完成的课程……</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPP Section -->
+            <section id="opp" class="card fade-in-up">
+                <div class="org-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>安大略省警察局</h2>
+                </div>
+                
+                <div class="role-section">
+                    <h3 class="role-title">数据分析</h3>
+                    <div class="role-desc">
+                        <p>在安大略省警察局（业务管理局）任职期间，我主要负责交通业务组合，专注于道路死亡、伤亡和碰撞事故。此外，我还积极参与犯罪、人员和资源分配相关的各类数据项目。</p>
+                        <p>虽然我的许多工作仍属机密，但我们部门参与编写的许多犯罪和司法相关报告可在加拿大统计局网站上找到：<a href="https://www150.statcan.gc.ca/n1/en/type/data?subject_levels=35" target="_blank">原始数据</a>及<a href="https://www150.statcan.gc.ca/n1/en/type/analysis?subject_levels=35" target="_blank">分析报告</a>。</p>
+                    </div>
+                </div>
+
+                <div class="role-section">
+                    <h3 class="role-title">业务运营</h3>
+                    <div class="role-desc">
+                        <p>为提高报告效率，我主导将现有 Excel 报告自动化为 Power BI 仪表板，制定了标准化操作程序，并创建了包括视频和文档在内的培训材料。</p>
+                        <p>此外，我还管理用于确定 OPP 向小型市政当局和乡镇提供合同服务成本的财务和人员统计模型，该模型包含多种因素和关键变量。</p>
+                        <p>我还监管部门 50% 的采购运营，与供应商（包括 SAS）合作，确定最佳产品方案、起草业务案例并管理合同。</p>
+                    </div>
+                </div>
+            </section>
 
             <!-- UChicago Section -->
+            <section id="uchicago" class="card fade-in-up">
+                <div class="org-header">
+                    <i class="fas fa-university"></i>
+                    <h2>芝加哥大学犯罪实验室</h2>
+                </div>
+                
+                <div class="role-section">
+                    <h3 class="role-title">SDSC（战略决策支持中心）</h3>
+                    <div class="role-desc">
+                        <p>在芝加哥大学期间，我主要从事 SDSC 项目——这是芝加哥警察局行动局内的一项协作智能警务计划。最初，我为芝加哥警察局三个分区进行犯罪和资源分析，向分区指挥官提供数据驱动的洞察和战略建议。我还以多种身份为全市多个分区做出贡献。</p>
+                        <p>随后，我担任南区副局长的分析师，同时也担任南区侦探的 ATC（区域技术中心）分析师。ATC 本质上是侦探局的 SDSC 对应机构，使用截然不同的工具、设备和程序运作。</p>
+                        <p>在犯罪分析工作结束后，我转到芝加哥警察局总部，参与了专注于交通、人员管理和同意令合规的项目。</p>
+                        <div class="img-gallery">
+                            <figure>
+                                <img src="images/sdsc.jpg" alt="Briefing CPD staff">
+                                <figcaption>图为我（中间）向芝加哥警察局高级工作人员进行简报。</figcaption>
+                            </figure>
+                        </div>
+                        <ul>
+                            <li>芝加哥大学有关该项目<a href="https://urbanlabs.uchicago.edu/attachments/c83b0a5180de9f7fec83d5ffdaa75fa6a9233a38/store/a307ce9c99429b8e276b2fa982ce2df90a44f1207258a7c1ca95914f1342/city+club+Jan+2018_FINAL.PDF" target="_blank">历史</a>与背景的文章： [<a href="https://urbanlabs.uchicago.edu/programs/strategic-decision-support-centers-sdscs" target="_blank">概述</a> | <a href="https://news.uchicago.edu/story/10-million-grant-will-support-crime-lab-collaboration-police-innovation" target="_blank">资金来源1</a> | <a href="https://urbanlabs.uchicago.edu/attachments/c294048f0ccedb2d0f7570c95a9dc27a7d751738/store/5dad037e6ec7c7da989307b597c68437c1a36780da701fba95abc4566d32/Mayor+Emanuel%2C+Ken+Griffin%2C+University+of+Chicago+Crime+Lab+Announce+%2410....pdf" target="_blank">资金来源2</a>].</li>
+                            <li>由我的几位同事起草的包含项目更具体信息的研究论文：[<a href="https://www.nber.org/system/files/working_papers/w29851/w29851.pdf" target="_blank">研究论文</a>]</li>
+                            <li>犯罪实验室内部评估以及兰德公司针对项目效果和结果进行的独立第三方评估：[<a href="https://www.niss.org/sites/default/files/4.SDSC_Ludwig_20190619.pdf" target="_blank">犯罪实验室评估</a> | <a href="https://yidawang.ca/pdf/rand.pdf" target="_blank">兰德评估</a>]</li>
+                            <li>SDSC 获得综合司法信息系统（NJIS）研究所认可，并在其 2021 年全国研讨会上荣获 2021 年 Thomas J. O'Reilly 创新奖：[<a href="https://ijis.org/awards/thomas-j-oreilly-innovation-award/" target="_blank">历届获奖者</a>]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="role-section">
+                    <h3 class="role-title">芝加哥市：暴力减少仪表板</h3>
+                    <div class="role-desc">
+                        <p>我在芝加哥市长办公室工作的一个关键部分是领导区域协调会议的南区数据工作。该倡议汇聚了多个机构和组织的多元联盟——包括芝加哥大学犯罪实验室（我作为代表参与）、芝加哥大学医学中心、芝加哥警察局、芝加哥市长办公室、芝加哥街道和卫生局、芝加哥公园区、库克县检察官办公室、Chicago CRED 以及众多其他公共机构和非营利组织——共同应对暴力犯罪及相关问题。</p>
+                        <p>作为这些双周例会的一部分，另一位分析师和我手动汇编了犯罪统计报告，追踪致命枪击、非致命枪击和非枪击凶杀案件。意识到需要更高效、更便捷的方法，我们开发了 VR 仪表板，这是芝加哥市有史以来第一个公共数据仪表板。经过六个月的开发，仪表板在市政网站上正式上线，为利益相关者和公众提供实时犯罪分析。</p>
+                        <p>除共同开发仪表板外，我还负责制作每月更新和故障排除简报、设计封面页和底图，以及为公共机构、外展组织和其他关键利益相关者领导培训课程和演示。</p>
+                        <div class="img-gallery">
+                            <figure>
+                                <img src="images/vrdash.jpg" alt="VR Dashboard">
+                                <figcaption>暴力减少仪表板——芝加哥市有史以来第一个公共数据仪表板。</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/vrdash2.jpg" alt="VR Dashboard screenshots">
+                                <figcaption>仪表板的几个截图，使用 Tableau 和 Tableau Prep 制作。</figcaption>
+                            </figure>
+                        </div>
+                        <p>截至 2021 年 5 月 27 日，VR 仪表板正式向公众开放：</p>
+                        <ul>
+                            <li>访问网站： [<a href="https://www.chicago.gov/city/en/sites/vrd/home.html" target="_blank">仪表板</a>]</li>
+                            <li>访问数据来源： [<a href="https://data.cityofchicago.org/browse?tags=violence+reduction&sortBy=most_accessed&pageSize=20" target="_blank">Chicago Data Portal</a>]</li>
+                            <li>直接来自市长办公室的详情： [<a href="https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2021/may/ViolenceReductionDashboard.html" target="_blank">市长新闻稿</a> | <a href="https://webapps1.chicago.gov/vrdashboard/resources/pdf/VR-Dashboard_UseTermsAgreement.pdf" target="_blank">VR 仪表板使用条款协议</a>]</li>
+                            <li>查看媒体对这一创新工具的报道： [<a href="https://chicago.cbslocal.com/2021/05/26/chicago-violence-reduction-dashboard/" target="_blank">CBS</a> | <a href="https://www.fox32chicago.com/video/937825" target="_blank">FOX</a> | <a href="https://www.msn.com/en-us/news/crime/city-launches-new-violence-reduction-dashboard-in-effort-to-improve-crime-data-reporting/ar-AAKpD29" target="_blank">MSN</a> | <a href="https://www.smartcitiesworld.net/news/news/chicago-launches-violence-reduction-dashboard-6464" target="_blank">Smart Cities World</a> | <a href="https://chicagodefender.com/the-city-of-chicago-and-the-university-of-chicagos-crime-lab-launch-the-citys-first-ever-violence-reduction-dashboard/" target="_blank">The Chicago Defender</a>]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="role-section">
+                    <h3 class="role-title">芝加哥警察局同意令</h3>
+                    <div class="role-desc">
+                        <p>我有机会参与同意令下的多个项目，同意令是美国司法部发布的用于改革执法机构的联邦授权。在 2017 年芝加哥实施之前，同意令已在全国多个警察局执行，包括洛杉矶警察局、西雅图警察局和新奥尔良警察局。</p>
+                        <p>我的工作重点是加强社区与警察关系、提升资源和巡逻效率，以及分析人员数据（尤其是缺勤和休假趋势）以支持知情的政策决策等关键领域。</p>
+                        <ul>
+                            <li>有关芝加哥警察局同意令的背景信息： [<a href="http://chicagopoliceconsentdecree.org/about/" target="_blank">伊利诺伊州检察长</a> | <a href="https://cpdmonitoringteam.com/" target="_blank">芝加哥警察局独立监察团队</a> | <a href="https://www.chicago.gov/city/en/sites/police-reform/home/consent-decree.html" target="_blank">芝加哥市</a>]</li>
+                            <li>查看芝加哥警察局对同意令进展的内部追踪： [<a href="https://home.chicagopolice.org/statistics-data/data-dashboards/consent-decree-compliance-dashboard/" target="_blank">仪表板</a>]</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conferences Section -->
+            <section id="conferences" class="card fade-in-up">
+                <div class="org-header">
+                    <i class="fas fa-users"></i>
+                    <h2>参加的会议</h2>
+                </div>
+                
+                <div class="role-section">
+                    <div class="role-desc">
+                        <p>我还参加了多个执法和分析领域的会议，包括 Tableau 大会（2019年）、国际警察局长协会大会（2019年）、2018年打击犯罪者大会以及美国犯罪学学会年会（2015年）。</p>
+                        <div class="img-gallery">
+                            <figure>
+                                <img src="images/tableaugroup.jpg" alt="Tableau group photo">
+                                <figcaption>与来自芝加哥大学和芝加哥警察局的可爱同事合影。</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/tableauparty.jpg" alt="Tableau 2019 Data Night Out">
+                                <figcaption>我在 Tableau 2019 数据之夜。</figcaption>
+                            </figure>
+                        </div>
+                        <p style="margin-top: 1rem;">如果您对 Tableau 活动和会议感兴趣，请点击此处 [<a href="https://www.tableau.com/community/events" target="_blank">Tableau 活动</a>]</p>
+                        <p>在 2018 年打击犯罪者大会上，我和我的团队使用 Tableau 仪表板展示了创新的数据可视化，并介绍了智能警务的新方法。我们的演示面向代表超过 25 个执法机构的观众，以及由芝加哥警察局前技术服务主任和洛杉矶警察局前侦探副局长组成的评审团。</p>
+                        <div class="img-gallery">
+                            <figure>
+                                <img src="images/present.jpg" alt="SDSC presentation">
+                                <figcaption>一位同事展示我的分析报告，以展示 SDSC 的智能警务方面。</figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -133,7 +245,7 @@
                 <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
-        <button class="chatbot-btn" id="chatbot-toggle" title="Chat with AI Secretary">
+        <button class="chatbot-btn" id="chatbot-toggle" title="与 AI 秘书对话">
             <i class="fas fa-robot"></i>
             <span class="chatbot-text">AI 秘书</span>
         </button>
@@ -142,3 +254,7 @@
     <script src="script-zh.js"></script>
 </body>
 </html>
+
+
+
+
