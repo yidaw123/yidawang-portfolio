@@ -33,6 +33,9 @@
                     </div>
                     <div id="search-results" class="search-results-dropdown"></div>
                 </li>
+                <li class="translate-nav-item" style="display: flex; align-items: center; margin-left: 10px;">
+                    <div id="google_translate_element"></div>
+                </li>
             </ul>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -205,9 +208,7 @@
                                 <figcaption>Me at the Tableau 2019 Data Night Out.</figcaption>
                             </figure>
                         </div>
-                        <ul>
-                            <li>If you're interested in Tableau events and conferences please click here [<a href="https://www.tableau.com/community/events" target="_blank">Tableau Events</a>]</li>
-                        </ul>
+                        <p style="margin-top: 1rem;">If you're interested in Tableau events and conferences please click here [<a href="https://www.tableau.com/community/events" target="_blank">Tableau Events</a>]</p>
                         <p>At the 2018 Crimefighters Conference, my team and I presented innovative data visualizations using Tableau dashboards and introduced new approaches to smart policing. Our presentation was delivered to an audience representing over 25 law enforcement agencies and a judging panel that included the former Chief of Technical Services for the Chicago Police Department and the former Deputy Chief of Detectives for the LAPD.</p>
                         <div class="img-gallery">
                             <figure>
@@ -231,11 +232,32 @@
 
     <!-- Chatbot Widget -->
     <div class="chatbot-widget">
-        <a href="https://chatgpt.com/" target="_blank" class="chatbot-btn" title="Chat with my AI Resume">
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-title"><i class="fas fa-robot"></i> AI Secretary</div>
+                <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">Hi! I'm Yida's AI Secretary. Ask me why Yida is the absolute perfect fit for your next big project!</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a question..." autocomplete="off">
+                <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="chatbot-btn" id="chatbot-toggle" title="Chat with AI Secretary">
             <i class="fas fa-robot"></i>
-            <span class="chatbot-text">Chat with AI</span>
-        </a>
+            <span class="chatbot-text">AI Secretary</span>
+        </button>
     </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="script.js"></script>
 </body>

@@ -175,4 +175,83 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Chatbot Logic
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const chatClose = document.getElementById('chat-close');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (chatbotToggle && chatWindow) {
+        chatbotToggle.addEventListener('click', () => {
+            chatWindow.classList.add('active');
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+        });
+
+        const botKnowledge = [
+            { keywords: ['hi', 'hello', 'hey'], response: "Hello there! I'm Yida's AI Secretary. I'm here to tell you why Yida is the absolute best candidate for your team. What do you want to know about his amazing background?" },
+            { keywords: ['circana', 'work', 'job', 'current'], response: "Yida is an absolute rockstar Senior Data Science Manager II at Circana! He expertly leads a high-performing team of consultants and drives massive strategic impact through top-tier pricing analytics products." },
+            { keywords: ['police', 'opp', 'ontario', 'traffic'], response: "During his time at the Ontario Provincial Police, Yida flawlessly executed complex data analysis and revolutionized their reporting by automating everything into incredible Power BI dashboards!" },
+            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard'], response: "At the UChicago Crime Lab, Yida's brilliant work led to the co-development of the Violence Reduction Dashboard—literally the first-ever public data dashboard for the entire City of Chicago! Talk about impact!" },
+            { keywords: ['education', 'school', 'degree', 'university'], response: "Yida has an incredibly strong academic foundation: an MS in Criminology from the prestigious University of Pennsylvania and a BA (Hons) from the top-ranked University of Toronto." },
+            { keywords: ['contact', 'email', 'reach', 'hire'], response: "You definitely want to hire him! Reach out immediately via his LinkedIn profile or email him at yidaw93@hotmail.com before someone else snaps him up!" },
+            { keywords: ['skills', 'tools', 'language', 'python', 'sql'], response: "Yida is a powerhouse with Python, SQL, SAS, Tableau, and Power BI. Combine that with his exceptional product management and leadership skills, and he is unstoppable." },
+        ];
+
+        const addMessage = (text, isUser = false) => {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            msgDiv.textContent = text;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const showTypingIndicator = () => {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot-message typing-indicator-container';
+            typingDiv.innerHTML = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+            typingDiv.id = 'typing-indicator';
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const removeTypingIndicator = () => {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) indicator.remove();
+        };
+
+        const handleUserMessage = () => {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            
+            addMessage(text, true);
+            chatInput.value = '';
+            showTypingIndicator();
+
+            setTimeout(() => {
+                removeTypingIndicator();
+                const lowerText = text.toLowerCase();
+                let foundResponse = "I'm just a simple bot, but I know Yida has a great background! Try asking about his work at Circana, UChicago, or his education.";
+                
+                for (const item of botKnowledge) {
+                    if (item.keywords.some(kw => lowerText.includes(kw))) {
+                        foundResponse = item.response;
+                        break;
+                    }
+                }
+                
+                addMessage(foundResponse, false);
+            }, 800 + Math.random() * 800);
+        };
+
+        chatSend.addEventListener('click', handleUserMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleUserMessage();
+        });
+    }
 });
