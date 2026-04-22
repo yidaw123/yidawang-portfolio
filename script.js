@@ -8,6 +8,84 @@ document.addEventListener('DOMContentLoaded', () => {
         yearEl.textContent = new Date().getFullYear();
     }
 
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Dropdown toggle on mobile
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                // Only prevent default if clicking the main link, not the sublinks
+                if (e.target.classList.contains('nav-link')) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            }
+        });
+    });
+
+    // Search Functionality
+    const searchInput = document.getElementById('site-search');
+    const searchResults = document.getElementById('search-results');
+    
+    const searchIndex = [
+        { title: 'Home', url: 'index.html', snippet: 'Senior Data Science Manager II @ Circana' },
+        { title: 'Experience Overview', url: 'experience.html', snippet: 'Professional Experience snapshot' },
+        { title: 'Circana (IRI & NPD Group)', url: 'experience.html#circana', snippet: 'Project & Product Management, Data Science' },
+        { title: 'Ontario Provincial Police', url: 'experience.html#opp', snippet: 'Data Analysis, Traffic, Business Operations' },
+        { title: 'UChicago Crime Lab', url: 'experience.html#uchicago', snippet: 'SDSC, Violence Reduction Dashboard, Consent Decree' },
+        { title: 'Education', url: 'index.html', snippet: 'University of Pennsylvania, University of Toronto' },
+        { title: 'Interactive CV', url: 'https://public.tableau.com/app/profile/yida.wang24/viz/yida_resume/Resume', snippet: 'Tableau Interactive Resume' }
+    ];
+
+    if (searchInput && searchResults) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            searchResults.innerHTML = '';
+            
+            if (query.length < 2) {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            const results = searchIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.snippet.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const a = document.createElement('a');
+                    a.href = result.url;
+                    a.className = 'search-result-item';
+                    a.innerHTML = `
+                        <div class="search-result-title">${result.title}</div>
+                        <div class="search-result-snippet">${result.snippet}</div>
+                    `;
+                    searchResults.appendChild(a);
+                });
+            } else {
+                searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-snippet">No results found</div></div>';
+            }
+            searchResults.classList.add('active');
+        });
+
+        // Close search when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.classList.remove('active');
+            }
+        });
+    }
+
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     if (navbar) {

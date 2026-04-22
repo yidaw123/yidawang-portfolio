@@ -14,7 +14,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-brand">Yida Wang</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="experience.html" class="nav-link">Experience</a></li>
                 <li class="dropdown">
                     <a href="#" class="nav-link">CV <i class="fas fa-caret-down"></i></a>
@@ -26,7 +26,17 @@
                 <li><a href="https://github.com/yidaw123" target="_blank" rel="noopener noreferrer" class="nav-link" title="GitHub"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/yidawang/" target="_blank" rel="noopener noreferrer" class="nav-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://public.tableau.com/app/profile/yida.wang24/vizzes" target="_blank" rel="noopener noreferrer" class="nav-link" title="Tableau Profile"><i class="fas fa-chart-bar"></i></a></li>
+                <li class="search-nav-item">
+                    <div class="search-container">
+                        <input type="text" id="site-search" placeholder="Search..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div id="search-results" class="search-results-dropdown"></div>
+                </li>
             </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -37,9 +47,9 @@
                 <h1 class="hero-title">Yida Wang</h1>
                 <h2 class="hero-subtitle">Senior Data Science Manager II @ Circana</h2>
                 <div class="btn-group">
-                    <a href="https://github.com/yidaw123" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://github.com/yidaw123" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://www.linkedin.com/in/yidawang/" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="mailto:yidaw93@hotmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="mailto:yidaw93@hotmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </div>
             <div class="hero-image-container fade-in-up" style="transition-delay: 0.2s;">
@@ -102,9 +112,16 @@
     <footer>
         <div class="container footer-content">
             <p>&copy; <span id="year"></span> Yida Wang</p>
-            <p style="font-size: 0.8rem;">Coded using Claude and Gemini.</p>
         </div>
     </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <a href="https://chatgpt.com/" target="_blank" class="chatbot-btn" title="Chat with my AI Resume">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-text">Chat with AI</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>
