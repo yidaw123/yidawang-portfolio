@@ -38,7 +38,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-base);
-    background-image: linear-gradient(rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.25)), url('images/background_galaxy.png');
+    background-image: linear-gradient(rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.25)), url('images/background_galaxy_final.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -297,9 +297,9 @@ a:hover {
     padding: 30px;
     position: relative;
     z-index: 2;
-    background-color: var(--bg-base); /* Solid shield behind image pixels */
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 75%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 75%);
+    border-radius: 50%; /* Force physical oval shape */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 85%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 85%);
 }
 
 @keyframes pulse {
