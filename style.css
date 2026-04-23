@@ -594,17 +594,19 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .img-gallery figure {
     flex: 1 1 280px;
     margin: 0;
-    border-radius: 10px;
-    overflow: hidden;
+    padding: 1.25rem; /* Balanced internal padding */
+    border-radius: 12px;
     border: 1px solid var(--border-color);
     background: var(--bg-base);
+    display: flex;
+    flex-direction: column;
 }
 
 .img-gallery figure img {
@@ -612,19 +614,21 @@ section {
     height: 220px;
     object-fit: cover;
     display: block;
+    border-radius: 6px; /* Soften image corners inside card */
     transition: transform 0.4s ease;
 }
 
 .img-gallery figure:hover img {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 .img-gallery figcaption {
-    padding: 0.75rem 1rem;
+    padding: 0;
+    margin-top: 1.25rem;
     font-size: 0.82rem;
     color: var(--text-secondary);
     font-style: italic;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* Chatbot Widget */
