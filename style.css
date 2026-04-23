@@ -293,14 +293,14 @@ a:hover {
 .hero-image-container::before {
     content: '';
     position: absolute;
-    right: 30px; /* Matches hero-image padding */
+    right: 30px; 
     width: calc(100% - 60px);
-    max-width: 490px; /* Slightly smaller than img to stay within the mask */
-    height: 80%;
+    max-width: 490px;
+    height: 85%;
     background: var(--bg-base);
-    border-radius: 50%;
+    border-radius: 50%; /* Match portrait shape */
     z-index: 1;
-    filter: blur(20px); /* Soften the edges of the shield */
+    filter: blur(30px); /* Extremely soft transition */
 }
 
 .hero-image {
@@ -311,8 +311,9 @@ a:hover {
     padding: 30px;
     position: relative;
     z-index: 2;
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+    border-radius: 50%; /* Force true oval physical shape */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 70%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 70%);
 }
 
 @keyframes pulse {
