@@ -40,7 +40,7 @@ body {
     background-color: var(--bg-base);
     background-image: linear-gradient(rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.25)), url('images/background_poly.png');
     background-size: cover;
-    background-position: center;
+    background-position: 65% center;
     background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
