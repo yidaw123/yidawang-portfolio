@@ -1,4 +1,4 @@
-﻿// yidawang-site/script-zh.js
+// yidawang-site/script-zh.js
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -204,16 +204,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const botKnowledge = [
-            { keywords: ['circana', 'iri', 'npd'], response: "王一达目前是 Circana（前身为 IRI 和 NPD Group）的高级数据科学经理 II！他专业地领导着一支高绩效的顾问团队，并通过顶级的定价分析产品推动了巨大的战略影响。他负责测试产品、ETL、新功能以及高管层面的交付。" },
-            { keywords: ['skills', 'tools', 'python', 'sql', 'tableau', 'sas'], response: "王一达是 Python、SQL、SAS、Tableau 和 Power BI 方面的强者。他还具备大数据分析、预测建模、机器学习和商业智能方面的专业知识。他目前正在学习在 Databricks 中部署 ML 模型。结合他卓越的产品管理和领导技能，他是不可阻挡的。" },
-            { keywords: ['police', 'opp', 'ontario', 'traffic'], response: "在安大略省警察局工作期间，王一达完美地执行了专注于道路伤亡和碰撞的复杂数据分析。他通过将所有内容自动化为令人难以置信的 Power BI 仪表板，彻底改变了他们的报告方式，制定了标准化操作程序，并管理了合同服务的财务模型！" },
-            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard'], response: "在芝加哥大学犯罪实验室，王一达的出色工作促成了减少暴力仪表板的共同开发——这简直是芝加哥市有史以来第一个公共数据仪表板！他还与芝加哥警察局在智能警务倡议和同意令方面密切合作，并担任南区副局长的分析师。" },
-            { keywords: ['education', 'school', 'degree', 'university'], response: "王一达拥有极其深厚的学术基础：著名的宾夕法尼亚大学犯罪学（政策方向）硕士学位（2016年）和顶尖的多伦多大学犯罪学与社会学荣誉学士学位（2015年）。" },
-            { keywords: ['contact', 'email', 'reach', 'linkedin'], response: "您绝对想雇用他！赶快通过他的领英主页（linkedin.com/in/yidawang）联系他，或者发送电子邮件至 yidaw93@hotmail.com，以免被别人抢先！" },
-            { keywords: ['resume', 'cv', 'download'], response: "您可以查看他的交互式 Tableau 简历，或者从上方导航栏的\"简历\"下拉菜单中下载 PDF 版本！" },
-            { keywords: ['experience', 'work', 'job', 'career'], response: "王一达拥有横跨私营和公共部门的精彩职业生涯！他目前在 Circana 领导数据科学团队，之前在安大略省警察局担任统计学家，再之前是芝加哥大学犯罪实验室的项目经理，与芝加哥警察局和市长办公室合作。问我任何具体的职位！" },
-            { keywords: ['hello', 'hey', 'greetings', 'howdy'], response: "你好！我是王一达的 AI 秘书。我在这里告诉你为什么一达是您团队的绝对最佳候选人。您想了解他惊人的背景中的什么？" }
-        ];
+            { keywords: ['circana', 'iri', 'npd', '定价', '市场研究'], response: "王一达目前是 Circana（前身为 IRI 和 NPD Group）的高级数据科学经理 II！他专业地领导着一支高效的顾问团队，通过顶级定价分析产品推动重大战略影响。他负责测试产品、ETL 流程和新功能，并确保质量控制和调试以实现最佳性能。" },
+            { keywords: ['skills', 'tools', 'python', 'sql', 'tableau', 'sas', '技能', '核心', '能力', '工具', '技术'], response: "一达精通 Python、SQL、SAS、Tableau 和 Power BI。他还具备大数据分析、预测建模、预测、机器学习和商业智能方面的专业知识。他目前正在学习在 Databricks 中部署 ML 模型。结合他卓越的产品管理和领导技能，他是不可阻挡的！" },
+            { keywords: ['police', 'opp', 'ontario', 'traffic', '警察', '安大略'], response: "在安大略省警察局任职期间，一达出色地执行了复杂的数据分析工作，重点关注道路死亡和碰撞事故。他通过将所有报告自动化为令人印象深刻的 Power BI 仪表板，彻底革新了他们的报告流程，创建了标准化操作程序和培训材料，并管理合同服务的财务模型！" },
+            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard', '芝加哥', '犯罪', '仪表板'], response: "在芝加哥大学犯罪实验室，一达的出色工作促成了暴力减少仪表板的共同开发——这是芝加哥市有史以来第一个公共数据仪表板！他还与芝加哥警察局密切合作开展智能警务计划和同意令，并担任南区副局长的分析师。" },
+            { keywords: ['education', 'school', 'degree', 'university', '教育', '学校', '大学', '学位', '学历'], response: "一达有非常扎实的学术背景：宾夕法尼亚大学犯罪学硕士（政策方向）学位（2016年）和多伦多大学犯罪学与社会学荣誉学士学位（2015年）。" },
+            { keywords: ['contact', 'email', 'reach', 'linkedin', '联系', '邮箱', '邮件', '招聘', '雇用'], response: "您一定想雇用他！请立即通过他的 LinkedIn（linkedin.com/in/yidawang）联系他，或发送邮件至 yidaw93@hotmail.com，赶快行动吧！" },
+            { keywords: ['resume', 'cv', 'download', '简历', '下载'], response: "您可以查看他的 Tableau 交互式简历，或从导航栏上方的'CV'下拉菜单下载 PDF 版本！" },
+            { keywords: ['experience', 'work', 'job', 'career', '经验', '工作', '职业', '经历'], response: "一达拥有令人印象深刻的多元化职业经历！他目前在 Circana 担任高级管理职位，此前曾在安大略省警察局从事数据分析和业务运营，还在芝加哥大学犯罪实验室参与了多个开创性项目，包括开发芝加哥市首个公共数据仪表板！" },
+            { keywords: ['hello', 'hey', 'greetings', 'howdy', '你好', '嗨', '您好'], response: "你好！我是王一达的 AI 秘书。问问我为什么一达是您下一个大项目的完美人选吧！了解他的核心技能、工作经历或任何您想知道的信息。" }
+        ]
 
         const quickReplies = [
             "他的核心技能是什么？",
