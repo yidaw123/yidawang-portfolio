@@ -18,16 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dropdown toggle on mobile
+    // Dropdown toggle for better accessibility
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                // Only prevent default if clicking the main link, not the sublinks
-                if (e.target.classList.contains('nav-link')) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                }
+        const link = dropdown.querySelector('.nav-link');
+        if (link) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
             }
         });
     });
@@ -187,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatbotToggle && chatWindow) {
         chatbotToggle.addEventListener('click', () => {
             chatWindow.classList.add('active');
+            if (chatMessages.children.length <= 1) {
+                setTimeout(showQuickReplies, 500);
+            }
         });
 
         chatClose.addEventListener('click', () => {
@@ -194,20 +204,77 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const botKnowledge = [
-            { keywords: ['hi', 'hello', 'hey'], response: "Hello there! I'm Yida's AI Secretary. I'm here to tell you why Yida is the absolute best candidate for your team. What do you want to know about his amazing background?" },
-            { keywords: ['circana', 'work', 'job', 'current'], response: "Yida is an absolute rockstar Senior Data Science Manager II at Circana! He expertly leads a high-performing team of consultants and drives massive strategic impact through top-tier pricing analytics products." },
-            { keywords: ['police', 'opp', 'ontario', 'traffic'], response: "During his time at the Ontario Provincial Police, Yida flawlessly executed complex data analysis and revolutionized their reporting by automating everything into incredible Power BI dashboards!" },
-            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard'], response: "At the UChicago Crime Lab, Yida's brilliant work led to the co-development of the Violence Reduction Dashboard—literally the first-ever public data dashboard for the entire City of Chicago! Talk about impact!" },
-            { keywords: ['education', 'school', 'degree', 'university'], response: "Yida has an incredibly strong academic foundation: an MS in Criminology from the prestigious University of Pennsylvania and a BA (Hons) from the top-ranked University of Toronto." },
-            { keywords: ['contact', 'email', 'reach', 'hire'], response: "You definitely want to hire him! Reach out immediately via his LinkedIn profile or email him at yidaw93@hotmail.com before someone else snaps him up!" },
-            { keywords: ['skills', 'tools', 'language', 'python', 'sql'], response: "Yida is a powerhouse with Python, SQL, SAS, Tableau, and Power BI. Combine that with his exceptional product management and leadership skills, and he is unstoppable." },
+            { keywords: ['circana', 'iri', 'npd', 'pricing', 'market research'], response: "Yida is currently a Senior Data Science Manager II at Circana (formerly IRI and NPD Group). He expertly leads a high-performing team of consultants and drives massive strategic impact through top-tier pricing analytics products. He handles testing products, ETLs, new features, and executive-level deliverables." },
+            { keywords: ['skills', 'tools', 'python', 'sql', 'tech', 'stack', 'tableau', 'power bi', 'sas', 'coding', 'programming'], response: "Yida is a powerhouse with Python, SQL, SAS, Tableau, and Power BI. He also has expertise in big data analytics, predictive modeling, forecasting, machine learning, and business intelligence. He's currently learning to deploy ML models within Databricks. Combine that with his exceptional product management and leadership skills, and he is unstoppable." },
+            { keywords: ['police', 'opp', 'ontario', 'traffic'], response: "During his time at the Ontario Provincial Police, Yida flawlessly executed complex data analysis focusing on roadway fatalities and collisions. He revolutionized their reporting by automating everything into incredible Power BI dashboards, created standardized SOPs and training materials, and managed financial models for contract services." },
+            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard', 'mayor', 'violence'], response: "At the UChicago Crime Lab, Yida's brilliant work led to the co-development of the Violence Reduction Dashboard—literally the first-ever public data dashboard for the entire City of Chicago! He also worked closely with the Chicago Police Department on smart policing initiatives and the Consent Decree, and served as an analyst for the Area South Deputy Chief." },
+            { keywords: ['education', 'school', 'degree', 'university', 'penn', 'toronto', 'criminology'], response: "Yida has an incredibly strong academic foundation: an MS in Criminology (focusing on policy) from the prestigious University of Pennsylvania (2016) and a BA in Criminology & Sociology (Hons) from the top-ranked University of Toronto (2015)." },
+            { keywords: ['contact', 'email', 'reach', 'message', 'linkedin'], response: "You definitely want to hire him! Reach out immediately via his LinkedIn profile (linkedin.com/in/yidawang) or email him at yidaw93@hotmail.com before someone else snaps him up!" },
+            { keywords: ['resume', 'cv', 'download'], response: "You can check out his interactive Tableau resume or download the PDF version from the 'CV' dropdown in the navigation bar above!" },
+            { keywords: ['project', 'portfolio', 'website', 'entrepreneur', 'startup'], response: "This website itself is a showcase of his skills! He's always exploring new challenges, currently looking to dabble in entrepreneurship, tech, B2C, and data analytics startups. If you're interested in collaborating, reach out on LinkedIn!" },
+            { keywords: ['experience', 'work', 'job', 'career', 'background', 'history'], response: "Yida has an incredible career spanning the private and public sectors! He's currently at Circana leading data science teams, previously worked as a Statistician at the Ontario Provincial Police, and before that was a Project Manager at the UChicago Crime Lab working with CPD and the Mayor's Office. Ask me about any specific role!" },
+            { keywords: ['hire', 'why', 'candidate', 'fit', 'best', 'strengths'], response: "Here's why Yida stands out: He combines deep technical skills (Python, SQL, ML) with proven leadership experience managing teams and delivering executive-level insights. He's built the first-ever public dashboard for a major US city, automated reporting for a national police force, and drives strategic impact at a global market research firm. He's a rare blend of technical depth and business acumen!" },
+            { keywords: ['hello', 'hey', 'greetings', 'howdy', 'sup'], response: "Hello there! I'm Yida's AI Secretary. I'm here to tell you why Yida is the absolute best candidate for your team. What do you want to know about his amazing background?" }
+        ];
+
+        const quickReplies = [
+            "What are his core skills?",
+            "Tell me about his work at Circana",
+            "Where did he go to school?",
+            "How can I contact him?"
         ];
 
         const addMessage = (text, isUser = false) => {
+            // Remove quick replies if they exist
+            const qrContainer = document.querySelector('.quick-replies');
+            if (qrContainer) qrContainer.remove();
+
             const msgDiv = document.createElement('div');
             msgDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
             msgDiv.textContent = text;
             chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const showQuickReplies = () => {
+            if (document.querySelector('.quick-replies')) return;
+            const qrDiv = document.createElement('div');
+            qrDiv.className = 'quick-replies';
+            qrDiv.style.display = 'flex';
+            qrDiv.style.flexWrap = 'wrap';
+            qrDiv.style.gap = '5px';
+            qrDiv.style.marginTop = '10px';
+            qrDiv.style.marginBottom = '10px';
+            
+            quickReplies.forEach(reply => {
+                const btn = document.createElement('button');
+                btn.textContent = reply;
+                btn.className = 'quick-reply-btn';
+                btn.style.padding = '6px 12px';
+                btn.style.fontSize = '0.8rem';
+                btn.style.borderRadius = '15px';
+                btn.style.border = '1px solid var(--accent-color)';
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-primary)';
+                btn.style.cursor = 'pointer';
+                btn.style.transition = 'all 0.2s';
+                
+                btn.addEventListener('mouseover', () => {
+                    btn.style.background = 'var(--accent-color)';
+                    btn.style.color = 'white';
+                });
+                btn.addEventListener('mouseout', () => {
+                    btn.style.background = 'transparent';
+                    btn.style.color = 'var(--text-primary)';
+                });
+                
+                btn.addEventListener('click', () => {
+                    chatInput.value = reply;
+                    handleUserMessage();
+                });
+                qrDiv.appendChild(btn);
+            });
+            chatMessages.appendChild(qrDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         };
 
@@ -236,16 +303,17 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 removeTypingIndicator();
                 const lowerText = text.toLowerCase();
-                let foundResponse = "I'm just a simple bot, but I know Yida has a great background! Try asking about his work at Circana, UChicago, or his education.";
+                let foundResponse = "I'm just a simple bot, but I know Yida has an amazing background! Try asking about his work at Circana, UChicago, his skills, or his education.";
                 
                 for (const item of botKnowledge) {
-                    if (item.keywords.some(kw => lowerText.includes(kw))) {
+                    if (item.keywords.some(kw => new RegExp('\\b' + kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(lowerText) || (kw.length > 3 && lowerText.includes(kw)))) {
                         foundResponse = item.response;
                         break;
                     }
                 }
                 
                 addMessage(foundResponse, false);
+                setTimeout(showQuickReplies, 1000);
             }, 800 + Math.random() * 800);
         };
 
