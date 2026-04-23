@@ -306,8 +306,8 @@ a:hover {
     padding: 30px;
     position: relative;
     z-index: 2;
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 65%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 65%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 70%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 70%);
 }
 
 .hero-image-glow {
@@ -315,14 +315,13 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%;
-    background: var(--bg-base);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, var(--bg-base) 20%, transparent 80%);
     border-radius: 50%;
     z-index: 1;
-    filter: blur(50px);
-    opacity: 0.9;
-    box-shadow: 0 0 80px 40px var(--bg-base);
+    filter: blur(60px);
+    opacity: 0.8;
 }
 
 @keyframes pulse {
