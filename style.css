@@ -262,6 +262,36 @@ a:hover {
     display: flex;
     align-items: center;
     padding-top: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Asymmetrical background masks to reduce line chaos around the portrait */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, var(--bg-base) 0%, transparent 70%);
+    top: 50%;
+    right: -150px;
+    transform: translateY(-50%);
+    z-index: 0;
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--bg-base) 0%, transparent 70%);
+    top: 10%;
+    right: 400px;
+    z-index: 0;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .hero-content {
