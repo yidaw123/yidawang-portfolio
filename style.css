@@ -559,11 +559,19 @@ section {
     border-bottom: 1px solid var(--border-color);
 }
 
+.org-header h2 {
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
 .org-header i {
     font-size: 2rem;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    transform: translateY(-1px); /* Slight nudge to match visual baseline */
 }
 
 .role-section {
