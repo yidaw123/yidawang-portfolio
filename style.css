@@ -38,7 +38,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-base);
-    background-image: linear-gradient(rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.25)), url('images/background_galaxy_final.png');
+    background-image: linear-gradient(rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.25)), url('images/background_galaxy.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -286,7 +286,21 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    isolation: isolate; /* Create new stacking context */
+    isolation: isolate;
+}
+
+/* This is the solid shield that blocks stars - perfectly locked to the portrait size */
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    right: 30px; /* Matches hero-image padding */
+    width: calc(100% - 60px);
+    max-width: 490px; /* Slightly smaller than img to stay within the mask */
+    height: 80%;
+    background: var(--bg-base);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(20px); /* Soften the edges of the shield */
 }
 
 .hero-image {
@@ -297,9 +311,8 @@ a:hover {
     padding: 30px;
     position: relative;
     z-index: 2;
-    border-radius: 50%; /* Force physical oval shape */
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 85%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 85%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
 }
 
 @keyframes pulse {
