@@ -286,6 +286,7 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    isolation: isolate; /* Create new stacking context */
 }
 
 .hero-image {
@@ -296,22 +297,9 @@ a:hover {
     padding: 30px;
     position: relative;
     z-index: 2;
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 75%);
-    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 75%);
-}
-
-.hero-image-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background: radial-gradient(circle, var(--bg-base) 20%, transparent 80%);
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(60px);
-    opacity: 0.8;
+    background-color: var(--bg-base); /* Solid shield behind image pixels */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 75%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 75%);
 }
 
 @keyframes pulse {
