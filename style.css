@@ -281,13 +281,14 @@ a:hover {
 
 .hero-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
     object-fit: contain;
+    padding: 50px; /* Creates a buffer zone so the mask doesn't hit the flat edges */
     position: relative;
     z-index: 2;
-    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 48%);
-    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 48%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
 }
 
 .hero-image-glow {
