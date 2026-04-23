@@ -204,17 +204,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const botKnowledge = [
-            { keywords: ['circana', 'iri', 'npd', 'pricing', 'market research'], response: "Yida is currently a Senior Data Science Manager II at Circana (formerly IRI and NPD Group). He expertly leads a high-performing team of consultants and drives massive strategic impact through top-tier pricing analytics products. He handles testing products, ETLs, new features, and executive-level deliverables." },
-            { keywords: ['skills', 'tools', 'python', 'sql', 'tech', 'stack', 'tableau', 'power bi', 'sas', 'coding', 'programming'], response: "Yida is a powerhouse with Python, SQL, SAS, Tableau, and Power BI. He also has expertise in big data analytics, predictive modeling, forecasting, machine learning, and business intelligence. He's currently learning to deploy ML models within Databricks. Combine that with his exceptional product management and leadership skills, and he is unstoppable." },
-            { keywords: ['police', 'opp', 'ontario', 'traffic'], response: "During his time at the Ontario Provincial Police, Yida flawlessly executed complex data analysis focusing on roadway fatalities and collisions. He revolutionized their reporting by automating everything into incredible Power BI dashboards, created standardized SOPs and training materials, and managed financial models for contract services." },
-            { keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard', 'mayor', 'violence'], response: "At the UChicago Crime Lab, Yida's brilliant work led to the co-development of the Violence Reduction Dashboard—literally the first-ever public data dashboard for the entire City of Chicago! He also worked closely with the Chicago Police Department on smart policing initiatives and the Consent Decree, and served as an analyst for the Area South Deputy Chief." },
-            { keywords: ['education', 'school', 'degree', 'university', 'penn', 'toronto', 'criminology'], response: "Yida has an incredibly strong academic foundation: an MS in Criminology (focusing on policy) from the prestigious University of Pennsylvania (2016) and a BA in Criminology & Sociology (Hons) from the top-ranked University of Toronto (2015)." },
-            { keywords: ['contact', 'email', 'reach', 'message', 'linkedin'], response: "You definitely want to hire him! Reach out immediately via his LinkedIn profile (linkedin.com/in/yidawang) or email him at yidaw93@hotmail.com before someone else snaps him up!" },
-            { keywords: ['resume', 'cv', 'download'], response: "You can check out his interactive Tableau resume or download the PDF version from the 'CV' dropdown in the navigation bar above!" },
-            { keywords: ['project', 'portfolio', 'website', 'entrepreneur', 'startup'], response: "This website itself is a showcase of his skills! He's always exploring new challenges, currently looking to dabble in entrepreneurship, tech, B2C, and data analytics startups. If you're interested in collaborating, reach out on LinkedIn!" },
-            { keywords: ['experience', 'work', 'job', 'career', 'background', 'history'], response: "Yida has an incredible career spanning the private and public sectors! He's currently at Circana leading data science teams, previously worked as a Statistician at the Ontario Provincial Police, and before that was a Project Manager at the UChicago Crime Lab working with CPD and the Mayor's Office. Ask me about any specific role!" },
-            { keywords: ['hire', 'why', 'candidate', 'fit', 'best', 'strengths'], response: "Here's why Yida stands out: He combines deep technical skills (Python, SQL, ML) with proven leadership experience managing teams and delivering executive-level insights. He's built the first-ever public dashboard for a major US city, automated reporting for a national police force, and drives strategic impact at a global market research firm. He's a rare blend of technical depth and business acumen!" },
-            { keywords: ['hello', 'hey', 'greetings', 'howdy', 'sup'], response: "Hello there! I'm Yida's AI Secretary. I'm here to tell you why Yida is the absolute best candidate for your team. What do you want to know about his amazing background?" }
+            { 
+                keywords: ['circana', 'iri', 'npd', 'pricing', 'market research', 'consulting', 'cpg', 'retail', 'forecast', 'forecasting', 'advanced analytics', 'product management'], 
+                response: "Yida is currently a Senior Data Science Manager II at Circana (formerly IRI and NPD Group). He expertly leads a high-performing team of consultants and drives massive strategic impact through top-tier pricing analytics products. He handles testing products, ETLs, new features, and executive-level deliverables." 
+            },
+            { 
+                keywords: ['skills', 'tools', 'python', 'sql', 'tech', 'stack', 'tableau', 'power bi', 'sas', 'coding', 'programming', 'machine learning', 'ml', 'big data', 'predictive', 'modeling', 'bi', 'databricks'], 
+                response: "Yida is a powerhouse with Python, SQL, SAS, Tableau, and Power BI. He also has expertise in big data analytics, predictive modeling, forecasting, machine learning, and business intelligence. He's currently learning to deploy ML models within Databricks. Combine that with his exceptional product management and leadership skills, and he is unstoppable." 
+            },
+            { 
+                keywords: ['police', 'opp', 'ontario', 'traffic', 'law enforcement', 'statistician', 'solicitor general', 'public safety', 'collisions', 'fatalities'], 
+                response: "During his time at the Ontario Provincial Police, Yida flawlessly executed complex data analysis focusing on roadway fatalities and collisions. He revolutionized their reporting by automating everything into incredible Power BI dashboards, created standardized SOPs and training materials, and managed financial models for contract services." 
+            },
+            { 
+                keywords: ['chicago', 'crime lab', 'sdsc', 'dashboard', 'mayor', 'violence', 'smart policing', 'cpd', 'detectives', 'area south', 'policy', 'urban labs'], 
+                response: "At the UChicago Crime Lab, Yida's brilliant work led to the co-development of the Violence Reduction Dashboard—literally the first-ever public data dashboard for the entire City of Chicago! He also worked closely with the Chicago Police Department on smart policing initiatives and the Consent Decree, and served as an analyst for the Area South Deputy Chief." 
+            },
+            { 
+                keywords: ['education', 'school', 'degree', 'university', 'penn', 'toronto', 'criminology', 'sociology', 'upenn', 'academic', 'masters', 'ba'], 
+                response: "Yida has an incredibly strong academic foundation: an MS in Criminology (focusing on policy) from the prestigious University of Pennsylvania (2016) and a BA in Criminology & Sociology (Hons) from the top-ranked University of Toronto (2015)." 
+            },
+            { 
+                keywords: ['contact', 'email', 'reach', 'message', 'linkedin', 'connect', 'talk', 'chat', 'hire', 'recruit', 'recruitment', 'job offer'], 
+                response: "You definitely want to hire him! Reach out immediately via his LinkedIn profile (linkedin.com/in/yidawang) or email him at yidaw93@hotmail.com before someone else snaps him up!" 
+            },
+            { 
+                keywords: ['resume', 'cv', 'download', 'pdf', 'interactive', 'tableau resume'], 
+                response: "You can check out his interactive Tableau resume or download the PDF version from the 'CV' dropdown in the navigation bar above!" 
+            },
+            { 
+                keywords: ['project', 'portfolio', 'website', 'entrepreneur', 'startup', 'b2c', 'tech startup', 'entrepreneurship', 'collaboration', 'partner'], 
+                response: "This website itself is a showcase of his skills! He's always exploring new challenges, currently looking to dabble in entrepreneurship, tech, B2C, and data analytics startups. If you're interested in collaborating, reach out on LinkedIn!" 
+            },
+            { 
+                keywords: ['experience', 'work', 'job', 'career', 'background', 'history', 'professional', 'roles', 'positions'], 
+                response: "Yida has an incredible career spanning the private and public sectors! He's currently at Circana leading data science teams, previously worked as a Statistician at the Ontario Provincial Police, and before that was a Project Manager at the UChicago Crime Lab working with CPD and the Mayor's Office. Ask me about any specific role!" 
+            },
+            { 
+                keywords: ['leadership', 'manage', 'manager', 'team', 'leading', 'leadership style', 'mentor', 'mentoring', 'supervise', 'supervision', 'director'], 
+                response: "Yida is a proven leader. At Circana, he leads a team of consultants, managers, and analysts, ensuring quality control and high-level delivery. At the UChicago Crime Lab, he managed complex multi-agency projects. His leadership style is data-driven, collaborative, and focused on empowering his team to drive strategic impact." 
+            },
+            { 
+                keywords: ['soft skills', 'communication', 'present', 'presentation', 'writing', 'stakeholder', 'briefing', 'negotiation', 'change management'], 
+                response: "Beyond technical depth, Yida excels in stakeholder management. He's experienced in delivering executive-level presentations, drafting policy briefs, and leading training sessions for diverse audiences, from police commanders to market research executives." 
+            },
+            { 
+                keywords: ['hire', 'why', 'candidate', 'fit', 'best', 'strengths', 'unique', 'stand out', 'value', 'impact'], 
+                response: "Here's why Yida stands out: He combines deep technical skills (Python, SQL, ML) with proven leadership experience managing teams and delivering executive-level insights. He's built the first-ever public dashboard for a major US city, automated reporting for a national police force, and drives strategic impact at a global market research firm. He's a rare blend of technical depth and business acumen!" 
+            },
+            { 
+                keywords: ['hello', 'hey', 'greetings', 'howdy', 'sup', 'hi', 'morning', 'evening'], 
+                response: "Hello there! I'm Yida's AI Secretary. I'm here to tell you why Yida is the absolute best candidate for your team. What do you want to know about his amazing background?" 
+            }
         ];
 
         const quickReplies = [
@@ -303,16 +344,53 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 removeTypingIndicator();
                 const lowerText = text.toLowerCase();
-                let foundResponse = "I'm just a simple bot, but I know Yida has an amazing background! Try asking about his work at Circana, UChicago, his skills, or his education.";
                 
+                let bestMatch = null;
+                let highestScore = 0;
+
                 for (const item of botKnowledge) {
-                    if (item.keywords.some(kw => new RegExp('\\b' + kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(lowerText) || (kw.length > 3 && lowerText.includes(kw)))) {
-                        foundResponse = item.response;
-                        break;
+                    let score = 0;
+                    for (const kw of item.keywords) {
+                        // Check for whole word match
+                        const regex = new RegExp('\\b' + kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+                        if (regex.test(lowerText)) {
+                            score += 2; // Higher weight for whole word
+                        } else if (kw.length > 3 && lowerText.includes(kw)) {
+                            score += 1; // Lower weight for partial match
+                        }
+                    }
+                    
+                    if (score > highestScore) {
+                        highestScore = score;
+                        bestMatch = item;
                     }
                 }
+
+                let response = "";
+                if (bestMatch) {
+                    if (highestScore <= 2) {
+                        // Weak match
+                        const preambles = [
+                            "I'm not entirely sure, but this might be what you're looking for: ",
+                            "If I understand correctly, you're asking about this: ",
+                            "I think this covers what you're interested in: "
+                        ];
+                        response = preambles[Math.floor(Math.random() * preambles.length)] + "\n\n" + bestMatch.response;
+                    } else {
+                        // Strong match
+                        response = bestMatch.response;
+                    }
+                } else {
+                    // No match
+                    const fallbacks = [
+                        "I'm not sure I follow, but Yida has an amazing background! Would you like to know about his skills, his work at Circana, or his education?",
+                        "I didn't quite catch that. Try asking about his experience at UChicago, his Python/SQL skills, or how to contact him!",
+                        "I'm still learning, but I can definitely tell you about Yida's leadership at Circana or his projects with the Police. What interests you?"
+                    ];
+                    response = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+                }
                 
-                addMessage(foundResponse, false);
+                addMessage(response, false);
                 setTimeout(showQuickReplies, 1000);
             }, 800 + Math.random() * 800);
         };
