@@ -183,6 +183,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile TOC Toggle Logic
+    const mobileTocToggle = document.getElementById('mobile-toc-toggle');
+    const sidebarToc = document.getElementById('sidebar-toc');
+    const tocClose = document.getElementById('toc-close');
+    const tocOverlay = document.getElementById('toc-overlay');
+
+    if (mobileTocToggle && sidebarToc) {
+        const toggleToc = () => {
+            sidebarToc.classList.toggle('active');
+            tocOverlay.classList.toggle('active');
+            document.body.style.overflow = sidebarToc.classList.contains('active') ? 'hidden' : '';
+        };
+
+        mobileTocToggle.addEventListener('click', toggleToc);
+        if (tocClose) tocClose.addEventListener('click', toggleToc);
+        if (tocOverlay) tocOverlay.addEventListener('click', toggleToc);
+
+        // Close TOC when a link is clicked
+        const tocLinksMobile = sidebarToc.querySelectorAll('.toc-link');
+        tocLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    toggleToc();
+                }
+            });
+        });
+    }
+
     // Chatbot Logic
     const chatbotToggle = document.getElementById('chatbot-toggle');
     const chatWindow = document.getElementById('chat-window');

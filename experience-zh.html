@@ -16,7 +16,7 @@
     </script>
 
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -64,8 +64,11 @@
     <section class="container experience-layout" style="padding-top: 2rem;">
         
         <!-- Sidebar TOC -->
-        <aside class="sidebar-toc fade-in-up" style="transition-delay: 0.2s;">
-            <h3 class="toc-title">目录</h3>
+        <aside class="sidebar-toc fade-in-up" id="sidebar-toc" style="transition-delay: 0.2s;">
+            <div class="toc-header">
+                <h3 class="toc-title">目录</h3>
+                <button class="toc-close" id="toc-close"><i class="fas fa-times"></i></button>
+            </div>
             <ul class="toc-links">
                 <li><a href="#circana" class="toc-link">Circana（前身为 IRI 和 NPD Group）</a></li>
                 <li><a href="#opp" class="toc-link">安大略省警察局</a></li>
@@ -240,6 +243,15 @@
             <p>&copy; <span id="year"></span> 王一达</p>
         </div>
     </footer>
+
+    <!-- Mobile TOC Toggle -->
+    <button class="mobile-toc-toggle" id="mobile-toc-toggle" title="目录">
+        <i class="fas fa-list-ul"></i>
+        <span class="toc-toggle-text">目录</span>
+    </button>
+
+    <!-- TOC Overlay -->
+    <div class="toc-overlay" id="toc-overlay"></div>
 
     <!-- Chatbot Widget -->
     <div class="chatbot-widget">
