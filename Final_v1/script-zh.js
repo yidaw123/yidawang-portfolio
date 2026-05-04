@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchResults = document.getElementById('search-results');
     
     const searchIndex = [
-        { title: '首页', url: 'index-zh.html', snippet: '正高级数据科学经理 @ Circana' },
+        { title: '首页', url: 'index-zh.html', snippet: '数据科学高级经理 II @ Circana' },
         { title: '工作经验概览', url: 'experience-zh.html', snippet: '职业经历概述' },
         { title: 'Circana（前身为 IRI 和 NPD Group）', url: 'experience-zh.html#circana', snippet: '项目与产品管理、数据科学' },
         { title: '安大略省警察局', url: 'experience-zh.html#opp', snippet: '数据分析、交通、业务运营' },
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const botKnowledge = [
             { 
                 keywords: ['circana', 'iri', 'npd', '定价', '市场研究', '咨询', '快消', '零售', '预测', '分析', '产品管理', '高级经理'], 
-                response: "王一达目前是 Circana（前身为 IRI 和 NPD Group）的正高级数据科学经理！他专业地领导着一支高效顾问团队，通过顶级定价分析产品推动重大战略影响。他负责测试产品、ETL 流程和新功能，并确保质量控制和调试以实现最佳性能。" 
+                response: "王一达目前是 Circana（前身为 IRI 和 NPD Group）的高级数据科学经理 II！他专业地领导着一支高效顾问团队，通过顶级定价分析产品推动重大战略影响。他负责测试产品、ETL 流程和新功能，并确保质量控制和调试以实现最佳性能。" 
             },
             { 
                 keywords: ['skills', 'tools', 'python', 'sql', 'tableau', 'sas', '技能', '核心', '能力', '工具', '技术', '编程', '机器学习', 'ml', '大数据', '建模', '商业智能', 'bi', 'databricks'], 
