@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     searchResults.appendChild(a);
                 });
             } else {
-                searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-snippet">No results found</div></div>';
+                searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-snippet">未找到结果</div></div>';
             }
             searchResults.classList.add('active');
         });
