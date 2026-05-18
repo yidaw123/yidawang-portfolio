@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow legacy and internal system files
+Disallow: /old_about.html
+Disallow: /check_twb.py
+Disallow: /check_twb.ps1
+Disallow: /serve.ps1
+
+# Link to sitemap
+Sitemap: https://yidawang.ca/sitemap.xml
