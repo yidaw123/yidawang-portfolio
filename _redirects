@@ -1,0 +1,2 @@
+# Redirect /about to the homepage (with a 301 permanent redirect) to resolve 404 errors
+/about    /    301
