@@ -2,8 +2,7 @@
 User-agent: *
 Allow: /
 
-# Disallow legacy and internal system files
-Disallow: /old_about.html
+# Disallow internal system files
 Disallow: /check_twb.py
 Disallow: /check_twb.ps1
 Disallow: /serve.ps1
